@@ -42,8 +42,7 @@ void draw() {
   
   //double up tree branch
   if(count % 100 == 0){
-    branchNum *= branchIncrease;
-    branchThick /= 2;
+    
     
     float tmpx[] = new float[ARRAY_MAX];
     float tmpy[] = new float[ARRAY_MAX];
@@ -59,9 +58,17 @@ void draw() {
       mx[branchi * branchIncrease + onebranchi] = cos(radian);
       my[branchi * branchIncrease + onebranchi] = sin(radian);
       
-      x[branchi*branchIncrease + onebranchi] = tmpx[branchi];
-      y[branchi*branchIncrease + onebranchi] = tmpy[branchi];
+      x[branchi * branchIncrease + onebranchi] = tmpx[branchi];
+      y[branchi * branchIncrease + onebranchi] = tmpy[branchi];
       }
+      //float radian = radians(random(0,180));
+      //mx[branchi * branchIncrease ] = cos(radian);
+      //my[branchi * branchIncrease] = sin(radian);
+      
+      //x[branchi * branchIncrease] = tmpx[branchi];
+      //y[branchi * branchIncrease] = tmpy[branchi];
     }
+    branchNum *= branchIncrease;
+    branchThick /= 2;
   }
 }
